@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ADE5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Dashboard">
+   <children>
+      <Text layoutX="30.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Vehicle" />
+      <Text layoutX="34.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Type" />
+      <Text layoutX="56.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver" />
+      <Pane layoutX="24.0" layoutY="200.0" prefHeight="166.0" prefWidth="261.0" style="-fx-background-color: #1234;">
+         <children>
+            <Text layoutX="17.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Parking Slot Number">
+               <font>
+                  <Font name="Serif Regular" size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="parkingNumber" layoutX="87.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" wrappingWidth="72.6708984375">
+               <font>
+                  <Font size="67.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="325.0" layoutY="47.0" prefHeight="96.0" prefWidth="261.0" style="-fx-background-color: #1234; -fx-background-radius: 5;">
+         <children>
+            <Text fx:id="txtDate" layoutX="7.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10/13/2022" wrappingWidth="100.9999930858612">
+               <font>
+                  <Font name="Serif Regular" size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtTime" layoutX="14.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="08:50:20 AM" textAlignment="CENTER" wrappingWidth="241.3173828125">
+               <font>
+                  <Font name="Sitka Text" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Button fx:id="parkbtn" layoutX="394.0" layoutY="185.0" mnemonicParsing="false" onAction="#parkVehicleOnAction" text="Park Vehicle" />
+      <Button fx:id="deliverybtn" layoutX="378.0" layoutY="236.0" mnemonicParsing="false" onAction="#onDeliveryShiftOnAction" text="On Delivery Shift" />
+      <Button layoutX="367.0" layoutY="283.0" mnemonicParsing="false" onAction="#managementLogInOnAction" text="Management Log In" />
+      <ComboBox fx:id="selectVehicle" layoutX="135.0" layoutY="39.0" onAction="#updateVehicleTypeOnAction" onMouseClicked="#onMouseClicked" prefWidth="150.0" />
+      <ComboBox fx:id="selectDriver" layoutX="135.0" layoutY="126.0" prefWidth="150.0" />
+      <Pane layoutX="135.0" layoutY="80.0" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #1234;">
+         <children>
+            <Text fx:id="txtVehicleType" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="150.00000335276127" />
+         </children>
+      </Pane>
+      <Button layoutX="413.0" layoutY="342.0" mnemonicParsing="false" onAction="#refreshAll" prefHeight="21.0" prefWidth="63.0" text="Refresh" textFill="#681212">
+         <font>
+            <Font name="Gadugi Bold" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

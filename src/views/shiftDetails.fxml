@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="602.0" prefWidth="887.0" style="-fx-background-color: #55B183;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.shiftDetails">
+   <children>
+      <Button layoutX="466.0" layoutY="59.0" mnemonicParsing="false" onAction="#addVehicleOnAction" text="Add Vehicle" />
+      <Button layoutX="607.0" layoutY="59.0" mnemonicParsing="false" onAction="#addDriverOnAction" text="Add Driver" />
+      <Button layoutX="751.0" layoutY="59.0" mnemonicParsing="false" onAction="#logOutOnAction" text="Log Out" />
+      <ComboBox fx:id="optionMenu" layoutX="77.0" layoutY="59.0" onAction="#optionSelectedOnAction" prefHeight="31.0" prefWidth="223.0" />
+      <TableView fx:id="tableView" layoutX="41.0" layoutY="130.0" prefHeight="415.0" prefWidth="802.0" style="-fx-background-color: #B8D4AF;">
+        <columns>
+          <TableColumn fx:id="vNumberColumn" prefWidth="213.0" text="Vehicle Number" />
+          <TableColumn fx:id="vTypeColumn" minWidth="9.0" prefWidth="115.0" text="Vehicle Type" />
+            <TableColumn fx:id="thirdColumn" prefWidth="144.0" />
+            <TableColumn fx:id="fourthColumn" prefWidth="329.0" />
+        </columns>
+      </TableView>
+      <Button layoutX="410.0" layoutY="557.0" mnemonicParsing="false" onAction="#refreshTablesOnAction" text="Refersh" />
+   </children>
+</AnchorPane>
